@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+:root {
+    --gray5: #546071;
+    --gray4: #455161;
+    --gray3: #364252;
+    --gray2: #263242;
+    --gray1: #172332;
+}
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+.lexend {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: var(--gray1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main_c {
+    background-color: var(--gray2);
+    color: var(--gray5);
+    margin: 0px 150px 0px 150px;
+    padding: 0px 5px 10px 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+.bio_c {
+    background-color: var(--gray3);
+    margin: 0px 150px 0px 150px;
+    border-radius: 5px;
+    padding-bottom: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title {
+    font-size: 70px;
 }
 
-.App-link {
-  color: #61dafb;
+.bio {
+    color: var(--gray2);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p.bio {
+    margin: 0px 20px 10px 20px;
+    text-align: justify;
 }
