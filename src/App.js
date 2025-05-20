@@ -1,10 +1,12 @@
 import "./App.css";
-import { Header } from "./components/components.js";
+import { Header, Projects } from "./components/components.js";
 
 function App() {
+  document.title = "Portfolio";
   return (
     <div class="main_c">
       <Header />
+      <Projects />
     </div>
   );
 }
