@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio-app/static/css/main.f7603ee1.css",
-    "main.js": "/portfolio-app/static/js/main.f0b11894.js",
+    "main.css": "/portfolio-app/static/css/main.9308e04a.css",
+    "main.js": "/portfolio-app/static/js/main.eca4792d.js",
     "static/js/453.f4fbaa6d.chunk.js": "/portfolio-app/static/js/453.f4fbaa6d.chunk.js",
     "static/media/games_img.png": "/portfolio-app/static/media/games_img.cc9916c5a97a7de433b7.png",
-    "static/media/Pandora.jpg": "/portfolio-app/static/media/Pandora.3f2a6d3e78535593d6e4.jpg",
+    "static/media/godot.png": "/portfolio-app/static/media/godot.55123c0c0e7d59bfa6ad.png",
+    "static/media/unity.png": "/portfolio-app/static/media/unity.6be58d54c4bfd7edce57.png",
+    "static/media/godot_logo.png": "/portfolio-app/static/media/godot_logo.38565f29761f02c5f762.png",
+    "static/media/Pandora.png": "/portfolio-app/static/media/Pandora.375d898a6b28c704217e.png",
     "index.html": "/portfolio-app/index.html",
-    "main.f7603ee1.css.map": "/portfolio-app/static/css/main.f7603ee1.css.map",
-    "main.f0b11894.js.map": "/portfolio-app/static/js/main.f0b11894.js.map",
+    "main.9308e04a.css.map": "/portfolio-app/static/css/main.9308e04a.css.map",
+    "main.eca4792d.js.map": "/portfolio-app/static/js/main.eca4792d.js.map",
     "453.f4fbaa6d.chunk.js.map": "/portfolio-app/static/js/453.f4fbaa6d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7603ee1.css",
-    "static/js/main.f0b11894.js"
+    "static/css/main.9308e04a.css",
+    "static/js/main.eca4792d.js"
   ]
 }
