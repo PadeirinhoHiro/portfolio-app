@@ -1,12 +1,11 @@
+import React from "react";
+import { Routing } from "./pages/router_n.js";
 import "./App.css";
-import { Header, Projects } from "./components/components.js";
 
 function App() {
-  document.title = "Portfolio";
   return (
-    <div class="main_c">
-      <Header />
-      <Projects />
+    <div className="App">
+      <Routing />
     </div>
   );
 }

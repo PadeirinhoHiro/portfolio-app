@@ -1,0 +1,49 @@
+:root {
+    --color5: #f8f9fa;
+    --color4: #dee2e6;
+    --color3: #6c757d;
+    --color2: #343a40;
+    --color1: #212529;
+}
+/* BIO */
+.bio_c {
+    text-align: center;
+    background-color: var(--color5);
+    margin: 0px 150px 0px 150px;
+    border-radius: 20px;
+    padding-bottom: 5px;
+}
+.bio.title {
+    font-size: 50px;
+}
+.bio {
+    color: var(--color1);
+}
+p.bio {
+    margin: 0px 20px 10px 20px;
+    text-align: justify;
+}
+/* ---------------------------- */
+.resume.title {
+    margin-top: 20px;
+    font-size: 35px;
+}
+.resume_c {
+    margin: 50px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: justify;
+}
+.origin_link {
+}
+.resume_img.godot {
+    filter: invert(11%) sepia(12%) saturate(703%) hue-rotate(169deg)
+        brightness(89%) contrast(90%);
+    height: 75px;
+}
+.resume_img.unity {
+    filter: invert(11%) sepia(12%) saturate(703%) hue-rotate(169deg)
+        brightness(89%) contrast(90%);
+    height: 75px;
+}

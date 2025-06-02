@@ -1,0 +1,27 @@
+:root {
+    --color5: #f8f9fa;
+    --color4: #dee2e6;
+    --color3: #6c757d;
+    --color2: #343a40;
+    --color1: #212529;
+}
+/* HOMEPAGE */
+.main_c {
+    background-color: var(--color5);
+    color: var(--color1);
+    margin: 0px 50px 0px 50px;
+    padding: 0px 5px 10px 5px;
+    border-radius: 20px;
+    text-align: center;
+}
+.title {
+    font-size: 70px;
+}
+
+.divider {
+    height: 10px;
+    width: 100%;
+    color: var(--color1);
+    background-color: var(--color1);
+    border-width: 0px;
+}

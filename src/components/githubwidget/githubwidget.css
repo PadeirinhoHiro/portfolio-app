@@ -1,0 +1,87 @@
+:root {
+    --color5: #f8f9fa;
+    --color4: #dee2e6;
+    --color3: #6c757d;
+    --color2: #343a40;
+    --color1: #212529;
+}
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+.github-widget {
+    background-color: var(--color1);
+    color: var(--color5);
+    border-radius: 20px;
+    padding: 1.5rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    font-family: lexend;
+}
+
+.github-widget a {
+    color: var(--color5);
+    text-decoration: none;
+}
+
+.github-widget a:hover {
+    text-decoration: underline;
+}
+
+.github-stats {
+    background-color: color;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.stat {
+    background: var(--color5);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.stat span {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color1);
+}
+
+.stat strong {
+    font-size: 1.5rem;
+    color: var(--color1);
+}
+
+.recent-repos ul,
+.recent-activity ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.recent-repos li,
+.recent-activity li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #30363d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.date {
+    margin-left: 10px;
+}
+
+.commit-message {
+    color: var(--color3);
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+.loading,
+.error {
+    font-family: lexend;
+    font-size: 20px;
+    text-align: center;
+    padding: 2rem;
+    color: var(--color1);
+}
