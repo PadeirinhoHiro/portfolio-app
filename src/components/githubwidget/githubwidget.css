@@ -12,9 +12,10 @@
     color: var(--color5);
     border-radius: 20px;
     padding: 1.5rem;
-    max-width: 800px;
+    max-width: 90%;
     margin: 2rem auto;
     font-family: lexend;
+    font-size: 1.2rem;
 }
 
 .github-widget a {
@@ -43,12 +44,12 @@
 
 .stat span {
     display: block;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--color1);
 }
 
 .stat strong {
-    font-size: 1.5rem;
+    font-size: 3rem;
     color: var(--color1);
 }
 
@@ -73,7 +74,7 @@
 
 .commit-message {
     color: var(--color3);
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     margin-top: 0.3rem;
 }
 
@@ -84,4 +85,19 @@
     text-align: center;
     padding: 2rem;
     color: var(--color1);
+}
+@media (max-width:768px) {
+    .github-widget
+    {
+        max-width: 80%;
+        flex-direction: column;
+        font-size: 0.7rem;
+    }
+    .github-widget a {
+        font-size: 0.9rem;
+    }
+    .stat strong
+    {
+        font-size: 1.2rem;
+    }
 }

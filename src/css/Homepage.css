@@ -9,12 +9,17 @@
 .main_c {
     background-color: var(--color5);
     color: var(--color1);
-    margin: 0px 50px 0px 50px;
+    margin: 10px 50px;
     padding: 0px 5px 10px 5px;
     border-radius: 20px;
     text-align: center;
 }
+.header_c {
+    display: flex;
+    flex-direction: column;
+}
 .title {
+    margin: 0;
     font-size: 70px;
 }
 
@@ -24,4 +29,13 @@
     color: var(--color1);
     background-color: var(--color1);
     border-width: 0px;
+}
+
+@media (max-width:768px)
+{
+    .main_c
+    {
+        margin: 0 15px;
+        max-width: 95%;
+    }
 }

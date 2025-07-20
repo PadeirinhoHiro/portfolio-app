@@ -1,12 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Bio } from "./bio.js";
-import { Projects } from "./projects.js";
-import { Layout } from "./layout_n.js";
-import Homepage from "./homepage.js";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Bio } from "./bio";
+import { Projects } from "./projects";
+import { Layout } from "./layout_n";
+import Homepage from "./homepage";
 
 export function Routing() {
   return (
-    <Router basename="/portfolio-app">
+    <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Homepage />} />

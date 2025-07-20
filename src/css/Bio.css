@@ -9,7 +9,8 @@
 .bio_c {
     text-align: center;
     background-color: var(--color5);
-    margin: 0px 150px 0px 150px;
+    margin: 10px 50px;
+    height: auto;
     border-radius: 20px;
     padding-bottom: 5px;
 }
@@ -35,8 +36,7 @@ p.bio {
     align-items: start;
     text-align: justify;
 }
-.origin_link {
-}
+
 .resume_img.godot {
     filter: invert(11%) sepia(12%) saturate(703%) hue-rotate(169deg)
         brightness(89%) contrast(90%);

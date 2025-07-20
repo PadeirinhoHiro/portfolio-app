@@ -1,12 +1,32 @@
 import "../githubwidget/githubwidget.css";
 import { useState, useEffect } from "react";
-import { fetchGitHubData } from "../services/githubService.js";
+import { fetchGitHubData } from "../services/githubService";
+
+
+type GitHubData = {
+  profile: {
+    html_url: string;
+    public_repos: number;
+    followers: number;
+  } | null;
+  repositories: {
+    id: number;
+    name: string;
+    html_url: string;
+    stargazers_count: number;
+  }[];
+  recentActivity: {
+    created_at: string;
+    repo: { name: string };
+    payload: { commits: { message: string }[] };
+  }[];
+};
+
 
 const GithubWidget = () => {
-  const [githubData, setGithubData] = useState(null);
+  const [githubData, setGithubData] = useState<GitHubData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
+  const [error, setError] = useState<string>("");
   // Substitua pelo seu username do GitHub
   const githubUsername = "padeirinhohiro";
 
@@ -19,7 +39,7 @@ const GithubWidget = () => {
         } else {
           setError("Não foi possível carregar os dados do GitHub");
         }
-      } catch (err) {
+      } catch (err : any) {
         setError(err.message);
       } finally {
         setLoading(false);
@@ -31,8 +51,12 @@ const GithubWidget = () => {
 
   if (loading)
     return <div className="loading">Carregando dados do GitHub...</div>;
-  if (error) return <div className="error">Erro: {error}</div>;
+  if (error) 
+    return <div className="error">Erro: {error}</div>;
+  if (!githubData || !githubData.profile) 
+    return <div>Sem dados disponíveis.</div>;
 
+  
   return (
     <div className="github-widget">
       <h3>

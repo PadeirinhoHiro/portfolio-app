@@ -4,8 +4,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "../css/Projects.css";
-import { importAll } from "../components/importfunc/importfunc.js";
+import { importAll } from "../components/importfunc/importfunc";
 import { motion } from "motion/react";
+
+declare const require: NodeJS.Require;
+
 
 export function Projects() {
   return (
@@ -25,18 +28,25 @@ export function Projects() {
     </div>
   );
 }
+interface ProjectFormat
+{
+  img : string[],
+  title : string,
+  link : string
+}
 
-function Project({ img, title, link }) {
+
+function Project({ img, title, link } : ProjectFormat) {
   return (
     <motion.div
-      className="proj_c"
+      className="proj_c" rel="noreferrer noopener"
       whileHover={{
         scale: 1.1,
         transition: { duration: 0.3 },
       }}
       whileTap={{ scale: 0.9 }}
       style={{ cursor: "pointer;" }}
-      onClick={() => (window.location.href = link)}
+      onClick={() => (window.open(link,"_blank")) }
     >
       <ImagesSlider url_images={img} />
       <h1 className="proj_title lexend">{title}</h1>
@@ -45,9 +55,9 @@ function Project({ img, title, link }) {
   );
 }
 
-function ImagesSlider({ url_images = [] }) {
+function ImagesSlider({ url_images = [] as string[]}) {
   const swiperParams = {
-    modules: [Pagination, Navigation, Autoplay],
+    modules: [Pagination, Navigation, Autoplay],  
     slidesPerView: 1, // Mostrar apenas 1 slide por vez
     spaceBetween: 30,
     loop: true,
@@ -76,9 +86,9 @@ function ImagesSlider({ url_images = [] }) {
   );
 }
 
-const Pj1 = importAll(
+const Pj1 = importAll<string>(
   require.context("../images/p1/", false, /\.(png|jpe?g|svg)$/),
 );
-const Pj2 = importAll(
+const Pj2 = importAll<string>(
   require.context("../images/p2/", false, /\.(png|jpe?g|svg)$/),
 );

@@ -1,5 +1,8 @@
 import "../css/Bio.css";
-import { importIndexAll } from "../components/importfunc/importfunc.js";
+import { importIndexAll } from "../components/importfunc/importfunc";
+
+declare const require: NodeJS.Require;
+
 
 export function Bio() {
   return (
@@ -33,7 +36,12 @@ export function Bio() {
   );
 }
 
-function Resume({ link, text, alt, dif }) {
+interface ResumeFormat
+{
+  link : string, text : string, alt : string, dif : string
+}
+
+function Resume({ link , text, alt, dif } : ResumeFormat) {
   return (
     <div className="resume_c">
       <a
@@ -54,6 +62,6 @@ function Resume({ link, text, alt, dif }) {
   );
 }
 
-const logos = importIndexAll(
+const logos = importIndexAll<string>(
   require.context("../images/logos", false, /\.(png|jpe?g|svg)$/),
 );
