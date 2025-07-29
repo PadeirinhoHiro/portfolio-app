@@ -2,7 +2,7 @@
 const GITHUB_API = "https://api.github.com";
 const CACHE_EXPIRY = 15 * 60 * 1000; // 15 minutos em milissegundos
 
-export const fetchGitHubData = async (username : string) => {
+export const fetchGitHubData = async (username: string) => {
   const cacheKey = `github-${username}`;
   const requestOptions = {
     method: "GET",
@@ -10,7 +10,7 @@ export const fetchGitHubData = async (username : string) => {
       Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
     },
   };
-    // Verifica o cache primeiro
+  // Verifica o cache primeiro
   const cachedData = localStorage.getItem(cacheKey);
   if (cachedData) {
     const { data, timestamp } = JSON.parse(cachedData);
@@ -46,7 +46,7 @@ export const fetchGitHubData = async (username : string) => {
 
     // Processa apenas eventos de push (commits)
     const recentActivity = eventsData
-      .filter((event : Event) => event.type === "PushEvent")
+      .filter((event: Event) => event.type === "PushEvent")
       .slice(0, 5); // Limita a 5 commits mais recentes
 
     // Prepara o objeto de retorno
@@ -67,25 +67,25 @@ export const fetchGitHubData = async (username : string) => {
     );
 
     return responseData;
-} catch (error: unknown) {
-  console.error("Erro ao buscar dados do GitHub:", error);
+  } catch (error: unknown) {
+    console.error("Erro ao buscar dados do GitHub:", error);
 
-  let errorMessage = "Erro desconhecido";
-  if (error instanceof Error) {
-    errorMessage = error.message;
-  }
+    let errorMessage = "Erro desconhecido";
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    }
 
-  // Se houver cache, retorna mesmo com erro
-  if (cachedData) {
-    return JSON.parse(cachedData).data;
-  }
+    // Se houver cache, retorna mesmo com erro
+    if (cachedData) {
+      return JSON.parse(cachedData).data;
+    }
 
-  return {
-    profile: null,
-    repositories: [],
-    recentActivity: [],
-    error: errorMessage,
-    lastUpdated: new Date().toISOString(),
+    return {
+      profile: null,
+      repositories: [],
+      recentActivity: [],
+      error: errorMessage,
+      lastUpdated: new Date().toISOString(),
+    };
   }
-  }
-}
+};
