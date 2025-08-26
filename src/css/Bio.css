@@ -47,3 +47,45 @@ p.bio {
         brightness(89%) contrast(90%);
     height: 75px;
 }
+
+.contacts_c
+{
+    margin-top: 20px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: 100%;
+}
+
+.contact_c
+{
+    display: flex;
+    flex-direction: row;
+    justify-items: start;
+    align-items: start;
+    width: fit-content;
+    height: 100px;
+    padding: 10px 10px;
+    background-color: var(--color1);
+    border-radius: 20px;
+    margin-inline: 20px;
+
+}
+
+.contact_img
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin: auto;
+
+}
+
+.contact_link
+{
+    font-size: 50px;
+    color:var(--color4);
+    text-decoration: none;
+    margin: auto;
+}

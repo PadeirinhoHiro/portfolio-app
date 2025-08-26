@@ -1,5 +1,10 @@
 import "../css/Bio.css";
 import { importIndexAll } from "../components/importfunc/importfunc";
+import instagramPic from "../images/contacts/instagram.jpg"
+import youtubePic from "../images/contacts/youtube.png"
+import linkedinPic from "../images/contacts/linkedin.jpg"
+import itchioPic from "../images/contacts/itchio.png"
+
 
 declare const require: NodeJS.Require;
 
@@ -14,6 +19,30 @@ export function Bio() {
         Game Programming. Este site está em desenvolvimento constante e está me
         ajudando a entender mais como utilizar o framework React.
       </p>
+      <hr className="divider"></hr>
+      <h1 className="bio title lexend">Contatos</h1>
+      <div className="contacts_c">
+        <ContactReference 
+        linktext={"LinkedIn"} 
+        link={"https://www.linkedin.com/in/aclerson-rodrigues-ab8487295/"} 
+        imglink={linkedinPic}
+        />
+        <ContactReference
+        linktext={"Instagram"}
+        link={"https://www.instagram.com/aclersonrsilva/"}
+        imglink={instagramPic}
+        />
+        <ContactReference
+        linktext={"Youtube"}
+        link={"https://www.youtube.com/@Padeiropao"}
+        imglink={youtubePic}
+        />
+        <ContactReference
+        linktext={"Itch.io"}
+        link={"https://padeirinhohiro.itch.io/"}
+        imglink={itchioPic}
+        />
+      </div>
       <hr className="divider"></hr>
       <h1 className="resume title lexend">Resumo das Stacks</h1>
       <Resume
@@ -60,6 +89,24 @@ function Resume({ link , text, alt, dif } : ResumeFormat) {
       <p className="resume_txt lexend">{text}</p>
     </div>
   );
+}
+
+interface Contact
+{
+  imglink: string,
+  linktext:string,
+  link: string;
+}
+
+
+function ContactReference({imglink,linktext,link} : Contact)
+{
+  return(
+    <div className="contact_c">
+        <img className="contact_img" loading="lazy" src={imglink} alt={"Foto de perfil do "+linktext}/>
+        <a className="contact_link lexend" href={link} target="_blank" rel="noopener noreferrer" >{linktext}</a>
+    </div>
+  )
 }
 
 const logos = importIndexAll<string>(
