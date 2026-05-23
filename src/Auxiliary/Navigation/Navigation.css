@@ -1,0 +1,42 @@
+:root {
+  --lightest: #dfdfdf;
+  --grayhigh: #9f9f9f;
+  --graylow: #606060;
+  --darkest: #202020;
+}
+
+
+/* Globals */
+
+.main-nav {
+  background-color: var(--darkest);
+  display: flex;
+}
+
+.nav-link {
+  color: var(--lightest);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-nav {
+    column-gap: 4px;
+  }
+
+  .nav-link {
+    font-size: 20px;
+    padding: 4px 6px;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .main-nav {
+    column-gap: 10px;
+  }
+
+  .nav-link {
+    font-size: 30px;
+    padding: 6px 8px;
+  }
+}

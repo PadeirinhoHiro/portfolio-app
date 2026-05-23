@@ -1,0 +1,45 @@
+:root {
+  --lighttest: #dfdfdf;
+  --grayhigh: #9f9f9f;
+  --graylow: #606060;
+  --darkest: #202020;
+}
+
+
+/* Globals */
+
+* {
+  font-family: "Hermit Nerd Font";
+  background-color: var(--darkest);
+  color: var(--lighttest)
+}
+
+.terminal-header {
+  text-align: center;
+  color: var(--lighttest);
+  border: var(--lighttest) solid 4px;
+  margin: 40px 10px 60px 10px;
+}
+
+.terminal-command {
+  border-bottom: var(--lighttest) solid 4px;
+}
+
+.terminal-section {
+  border: var(--lighttest) solid 4px;
+  margin: 10px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .terminal-header {
+    font-size: 20px;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .terminal-header {
+    font-size: 40px;
+  }
+}

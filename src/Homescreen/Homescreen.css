@@ -1,0 +1,41 @@
+:root {
+  --lighttest: #dfdfdf;
+  --grayhigh: #9f9f9f;
+  --graylow: #606060;
+  --darkest: #202020;
+}
+
+/* Globals */
+
+
+/* Profile */
+
+.profile-stats-grid {
+  display: grid;
+}
+
+.profile-stat-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.stat-title {
+  flex: 1;
+}
+
+/* -------------- */
+
+/* Repositories */
+.repository-card {
+  border: var(--lighttest) solid 4px;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+.repository-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------- */
